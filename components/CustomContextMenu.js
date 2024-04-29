@@ -173,12 +173,12 @@ export default function CustomContextMenu(props) {
                 {/* 功能按钮 */}
                 <div className='w-full px-2'>
 
-                    {siteConfig('CAN_COPY') && (
+                    {/* {siteConfig('CAN_COPY') && (
                          <div onClick={handleCopy} title={locale.MENU.COPY} className='w-full px-2 h-10 flex justify-start items-center flex-nowrap cursor-pointer hover:bg-blue-600 hover:text-white rounded-lg duration-200 transition-all'>
                          <i className="fa-solid fa-copy mr-2" />
                          <div className='whitespace-nowrap'>{locale.MENU.COPY}</div>
                      </div>
-                    )}
+                    )} */}
 
                     {siteConfig('CUSTOM_RIGHT_CLICK_CONTEXT_MENU_SHARE_LINK') && <div onClick={handleCopyLink} title={locale.MENU.SHARE_URL} className='w-full px-2 h-10 flex justify-start items-center flex-nowrap cursor-pointer hover:bg-blue-600 hover:text-white rounded-lg duration-200 transition-all'>
                         <i className="fa-solid fa-arrow-up-right-from-square mr-2" />
