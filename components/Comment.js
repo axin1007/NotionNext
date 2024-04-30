@@ -77,7 +77,12 @@ const Comment = ({ frontMatter, className }) => {
   const COMMENT_GITALK_CLIENT_ID = siteConfig('COMMENT_GITALK_CLIENT_ID')
   const COMMENT_WEBMENTION_ENABLE = siteConfig('COMMENT_WEBMENTION_ENABLE')
 
-  useEffect(() => {
+  // 将只有当前组件在浏览器可见范围内才会加载内容 改为 页面挂载的时候直接展示组件
+  useEffect(() =>
+    setShouldLoad(true)
+  , [])
+
+ /* useEffect(() => {
     // Check if the component is visible in the viewport
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -97,7 +102,7 @@ const Comment = ({ frontMatter, className }) => {
         observer.unobserve(commentRef.current)
       }
     }
-  }, [frontMatter])
+  }, [frontMatter]) */
 
   // 当连接中有特殊参数时跳转到评论区
   if (
